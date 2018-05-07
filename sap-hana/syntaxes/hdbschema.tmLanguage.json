@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SAP HANA Database Schema",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.hdbschema",
+					"match": "\\b(schema_name)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.hdbschema",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hdbschema",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.hdbschema",
+					"begin": "#",
+					"end": "\\n"
+				}
+			]
+		}
+	},
+	"scopeName": "source.hdbschema"
+}

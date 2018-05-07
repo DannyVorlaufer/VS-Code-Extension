@@ -1,0 +1,89 @@
+{
+    "name": "sap-hana",
+    "displayName": "SAP HANA",
+    "description": "sap hana language support",
+    "version": "0.0.1",
+    "publisher": "Danny Vorlaufer",
+    "engines": {
+        "vscode": "^1.20.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "hdbschema",
+                "path": "./snippets/hdbschema.json"
+            }
+        ],
+        "languages": [
+            {
+                "id": "hdbschema",
+                "aliases": [
+                    "SAP HANA Database Schema",
+                    "hdbschema"
+                ],
+                "extensions": [
+                    ".hdbschema",
+                    ".cds",
+                    ".CDS"
+                ],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "hdbtextbundle",
+                "aliases": [
+                    "SAP HANA TextBundle",
+                    "hdbtextbundle"
+                ],
+                "extensions": [
+                    ".hdbtextbundle"
+                ],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "hdbdd",
+                "aliases": [
+                    "SAP HANA hdbdd"
+                ],
+                "extensions": [
+                    ".hdbdd"
+                ],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "hdbview",
+                "aliases": [
+                    "SAP HANA hdbview"
+                ],
+                "extensions": [
+                    ".hdbview"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "hdbschema",
+                "scopeName": "source.hdbschema",
+                "path": "./syntaxes/hdbschema.tmLanguage.json"
+            },
+            {
+                "language": "hdbtextbundle",
+                "scopeName": "source.hdbtextbundle",
+                "path": "./syntaxes/hdbtextbundle.tmLanguage.json"
+            },
+            {
+                "language": "hdbdd",
+                "scopeName": "source.hdbdd",
+                "path": "./syntaxes/hdbdd.tmLanguage.json"
+            },
+            {
+                "language": "hdbview",
+                "scopeName": "source.hdbview",
+                "path": "./syntaxes/hdbview.tmLanguage.json"
+            }
+        ]
+    }
+}

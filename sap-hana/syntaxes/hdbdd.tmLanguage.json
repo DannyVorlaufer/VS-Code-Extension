@@ -1,0 +1,70 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SAP HANA TextBundle",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{ 
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.hdbdd",
+					"match": "\\b(context|key|Entity|Association|to|namespace)\\b"
+				},
+				{
+					"name": "entity.name.class.hdbdd",
+					"begin": "@",
+					"end": ":"  
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				
+				{
+					"name": "string.quoted.double.hdbdd",
+					"match": "[^:][A-Za-z0-9()]+;$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+				},
+				{
+					"name": "string.quoted.single.hdbdd",
+					"match": "'.*'"
+				},
+				{
+					"name": "constant.sha.git-rebase.hdbdd",
+					"begin": "#",
+					"end": "\\w\\b" 
+				},
+				 {
+					"name": "constant.character.escape.hdbdd",
+					"match": "\\w[^:]+"
+				}, 
+				{
+					"name": "markup.bold.hdbdd",
+					"match": "[^{}]"
+				},
+				{
+					"name": "constant.character.hdbdd",
+					"match": "{}"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.hdbdd",
+					"begin": "",
+					"end": ""
+				}
+			]
+		}
+	},
+	"scopeName": "source.hdbdd"
+}

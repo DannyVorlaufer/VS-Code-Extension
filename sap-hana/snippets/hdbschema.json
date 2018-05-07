@@ -1,0 +1,9 @@
+{
+"schema_name": {
+    "prefix": "schema_name",
+    "body": [
+        "schema_name=\"\";"
+    ],
+    "description": "schema_name"
+}
+}

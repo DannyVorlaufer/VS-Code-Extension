@@ -1,0 +1,54 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SAP HANA TextBundle",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.hdbtextbundle",
+					"match": "\\b(XMSG)\\b"
+				},
+				{
+					"name": "keyword.control.hdbtextbundle",
+					"match": "{.+}"
+				},
+				{
+					"name": "entity.name.class.hdbtextbundle",
+					"match": "[{0-9}]"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.hdbtextbundle",
+			"begin": "(?<==).*$",
+			"end": "\\n",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hdbtextbundle",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.hdbtextbundle",
+					"begin": "#",
+					"end": "\\n"
+				}
+			]
+		}
+	},
+	"scopeName": "source.hdbtextbundle"
+}
