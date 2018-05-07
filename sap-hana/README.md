@@ -6,10 +6,11 @@ This is the README for your extension "sap-hana". After writing up a brief descr
 
 ## Features
 
-Supports source.hdbdd
-         source.hdbtextbundle
+Supports source.hdbtextbundle
          source.hdbview
          source.hdbschema
+         
+    
 
 
 ## Requirements
